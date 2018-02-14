@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New Project</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <meta name="viewport" content="width=device-width, inistial-scale=1.0">
+    <meta name="description" content="">
+    
+    <!-- FÆLLES RETNINGSLINJER -->
+<!-- Afgør om det er div eller sematisk kode vi bruger -->
+<!-- Giv fælles klasses, således vores kode ikke bliver for lang -->
+<!-- !!!! HUSK det er en lang side vi skal lave så lav ikke undersider !!!!-->
+<!-- Sid sammen 2 og 2 -->
+<!-- Prik menu Lod/vandret-->
+<!-- Hvis du er i tvivl så rend koden igennem med andre-->
+<!-- Lav alt inde i #b og fjerne scrollbaren ingen margen i venstre og højre side ( billeder alle sider ) -->
+<!-- -->
+    
+    
+</head>   
+    <body>
+    <div id="b">
+        <div class="img_holder">
+            
+        </div>
+    </div>
+</body> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    
+    <script>
+        var scroller = {};
+scroller.e = document.getElementById("b");
+
+if (scroller.e.addEventListener) 
+{
+    scroller.e.addEventListener("mousewheel", MouseWheelHandler, false);
+    scroller.e.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+} else scroller.e.attachEvent("onmousewheel", MouseWheelHandler);
+
+function MouseWheelHandler(e) 
+{
+
+    // cross-browser wheel delta
+    var e = window.event || e;
+    var delta = - 20 * (Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))));
+
+    var pst = $('#b').scrollLeft() + delta;
+
+    if (pst < 0) 
+    {
+        pst = 0;
+    } else if (pst > $('img_holder').width()) 
+    {
+        pst = $('img_holder').width();
+    }
+
+    $('#b').scrollLeft(pst);
+
+    return false;
+}
+    </script>
+    
+    
+    
+    
+    
+</html>

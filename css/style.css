@@ -1,0 +1,46 @@
+scrollbar
+{
+    margin-bottom: -8px;
+}
+
+*
+{
+    box-sizing: border-box;
+    background-color: orange;
+    margin: 0%;
+}
+body
+{
+overflow-y: hidden;
+}
+
+#b {
+    width: 1600px;
+    border: 1px solid #111;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.img_holder {
+    padding: 0px;
+    margin: 0px;
+    height: 775px;
+    width: 5000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
